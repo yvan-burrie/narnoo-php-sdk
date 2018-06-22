@@ -18,6 +18,26 @@ class Connect extends \Narnoo\Base
             return $response;
         }
     }
+
+
+
+    public function findBusinesses($value)
+    {
+        try{
+            $url = "/connect/find";
+            $response = $this->callNarnooAPI("post",$url,$value);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+
+
+
+
+
+
 }
 
 ?>
