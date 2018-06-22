@@ -17,6 +17,10 @@ class ComposerStaticInit467639f9207230100f7e3aa078fdbd0f
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
+        'N' => 
+        array (
+            'Narnoo\\' => 7,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -29,6 +33,10 @@ class ComposerStaticInit467639f9207230100f7e3aa078fdbd0f
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Narnoo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Narnoo',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
