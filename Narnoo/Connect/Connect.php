@@ -7,7 +7,7 @@ namespace Narnoo\Connect;
 class Connect extends \Narnoo\Base
 {
     
-   /* public function getFollowing($value)
+    public function getFollowing($value)
     {
         try{
             $url = "/connect/following";
@@ -17,7 +17,7 @@ class Connect extends \Narnoo\Base
             $response = array("error" => $e->getMessage());
             return $response;
         }
-    }*/
+    }
 }
 
 ?>

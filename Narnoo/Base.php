@@ -1,9 +1,9 @@
 <?php 
 
 namespace Narnoo;
-//use GuzzleHttp\Client;
-//use GuzzleHttp\Exception\RequestException;
-//use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Request;
 
 /**
 *
@@ -11,9 +11,9 @@ namespace Narnoo;
 class Base
 {
 
-    //const API_URL = "https://apis.narnoo.com/api/v1/";
+    const API_URL = "https://apis.narnoo.com/api/v1/";
 
-   /* protected $client;
+    protected $client;
     protected $token;
     protected $secretkey;
     protected $accesskey;
@@ -45,7 +45,7 @@ class Base
            /* $response = $this->statusCodeHandling($e);
             return $response;
         }
-    }
+    }*/
     protected function callNarnooAPI($method,$request,$post = [])
     {
         try{
@@ -70,5 +70,5 @@ class Base
         $response = array("statuscode" => $e->getResponse()->getStatusCode(),
         "error" => json_decode($e->getResponse()->getBody(true)->getContents()));
         return $response;
-    }*/
+    }
 }
