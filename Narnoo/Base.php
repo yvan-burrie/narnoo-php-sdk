@@ -28,37 +28,51 @@ class Base
         $this->token 		= $token;
     }
 
-   /* protected function prepareAccessToken()
+    protected function callNarnooAuthentication($method,$request,$authn)
     {
         try{
-           /* $url = "https://api.twitter.com/oauth2/token";
-            $value = ['grant_type' => "client_credentials"
-            ];
-            $header = array('Authorization'=>'Basic ' .base64_encode($this->token.":".$this->tokensecret),
-            "Content-Type"=>"application/x-www-form-urlencoded;charset=UTF-8");
-            $response = $this->client->post($url, ['query' => $value,'headers' => $header]);
+            $url    = self::API_URL . $request;
+            $header = array('headers' => $authn);            
+
+            $response = $this->client->request($method,$url,$header);
             $result = json_decode($response->getBody()->getContents());
 
-            $this->accesstoken = $result->access_token;
+            return $result->token;
         }
         catch (RequestException $e) {
-           /* $response = $this->statusCodeHandling($e);
+            $response = $this->statusCodeHandling($e);
             return $response;
         }
-    }*/
-    protected function callNarnooAPI($method,$request,$post = [])
+    }
+    protected function callNarnooAPI($method,$request,$post = [],$json = NULL )
     {
         try{
 
             //$this->prepareAccessToken();
             $url = self::API_URL . $request;
             $header = array('Authorization'=>'bearer '. $this->token);
-            
+            $data   = array('query' => $post,'headers' => $header);
 
-            $response = $this->client->request($method,$url, array('query' => $post,'headers' => $header));
+            if(!empty($json)){
+                $payload  = json_encode($json);
+                
+                $jsonHeader = array( 
+                    'Content-Type'=>'application/json',
+                );
+                $header = array_merge($header,$jsonHeader);
+                
+                $jsonData = array( 
+                    'body' => $payload,
+                );
+                $data = array_merge($data,$jsonData);
+            }
+
+            $response = $this->client->request($method,$url,$data);
             
 
             return json_decode($response->getBody()->getContents());
+
+            //return $data;
         
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);

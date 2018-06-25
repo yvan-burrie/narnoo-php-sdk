@@ -20,12 +20,62 @@ class Connect extends \Narnoo\Base
     }
 
 
-
+    /*
+    *
+    *   {"latitude":"167";"longitude":"-16"}
+    */
     public function findBusinesses($value)
     {
         try{
             $url = "/connect/find";
-            $response = $this->callNarnooAPI("post",$url,$value);
+            $response = $this->callNarnooAPI("post",$url,NULL, $value);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+
+    /*
+    *
+    *   {"name":"Narnoo"}
+    */
+    public function searchBusinesses($value)
+    {
+        try{
+            $url = "/connect/search";
+            $response = $this->callNarnooAPI("post",$url,NULL,$value);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+
+    /*
+    *
+    *   {"type":"operator","id":78}
+    */
+    public function followBusinesses($value)
+    {
+        try{
+            $url = "/connect/add";
+            $response = $this->callNarnooAPI("post",$url,NULL,$value);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+    /*
+    *
+    *   {"type":"operator","id":78}
+    */
+    public function removeBusinesses($value)
+    {
+        try{
+            $url = "/connect/remove";
+            $response = $this->callNarnooAPI("post",$url,NULL,$value);
             return $response;
         } catch (Exception $e) {
             $response = array("error" => $e->getMessage());
