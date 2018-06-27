@@ -23,7 +23,7 @@ class Product extends \Narnoo\Base
         
         try{
             $url = "/product/list";
-            if(!empty($value) && is_integer($value) ){
+            if( !empty($value) ){
                 $url .= "/".$value;
             }
             $response = $this->callNarnooAPI("get",$url);
@@ -41,13 +41,14 @@ class Product extends \Narnoo\Base
     *   @param: int operator ID [ required if calling an operator product ID]
     *   @result: JSON
     */
-    public function getProductDetails($id,$value = NULL)
+    public function getProductDetails( $id, $operator=NULL )
     {   
         
         try{
-            $url = "/product/list/".$id;
-            if(!empty($value) && is_integer($value) ){
-                $url .= "/".$value;
+            $url = "/product/details/".$id;
+
+            if( !empty($operator) ){
+                $url .= "/".$operator;
             }
             $response = $this->callNarnooAPI("get",$url);
             return $response;

@@ -12,7 +12,7 @@ class Business extends \Narnoo\Base
     *
     **************************************************/
     
-    /**
+     /**
     *   @title: Get Listing
     *   @date: 25.06.2018
     *   @param: int business ID [optional]
@@ -23,7 +23,7 @@ class Business extends \Narnoo\Base
         
         try{
             $url = "/business/listing";
-            if(!empty($value) && is_integer($value) ){
+            if( !empty($value) ){
                 $url .= "/".$value;
             }
             $response = $this->callNarnooAPI("get",$url);
