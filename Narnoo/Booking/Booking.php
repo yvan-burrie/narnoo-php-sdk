@@ -19,7 +19,7 @@ class Booking extends \Narnoo\Base
     *   @param: int product ID [required]
     *   @result: JSON
     */
-    public function getProductDetails( $operatorId, $productId )
+    public function getProductBookingDetails( $operatorId, $productId )
     {   
         
         try{
@@ -54,7 +54,7 @@ class Booking extends \Narnoo\Base
     *   @param: int product ID [required]
     *   @result: JSON
     */
-    public function getProductBookingDetails( $operatorId, $productId, $bookingCode )
+    public function getBookingDetails( $operatorId, $productId, $bookingCode )
     {   
 
         $query = ['id' => $bookingCode];
@@ -92,7 +92,7 @@ class Booking extends \Narnoo\Base
     *   @param: int product ID [required]
     *   @result: JSON
     */
-    public function getProductAvailablityDetails( $operatorId, $productId, $bookingCode, $startDate, $endDate )
+    public function getProductAvailablity( $operatorId, $productId, $bookingCode, $startDate, $endDate )
     {   
 
         $query = ['id' => $bookingCode, 'startDate' => $startDate, 'endDate' => $endDate];
