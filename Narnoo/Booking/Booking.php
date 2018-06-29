@@ -79,11 +79,11 @@ class Booking extends \Narnoo\Base
     **************************************************/
 
 
-    /**************************************************
+    /***************************************************************
     *
     *                --- Product Availablity Details ---
     *
-    **************************************************/
+    ***************************************************************/
     
      /**
     *   @title: Get Product Details
@@ -92,15 +92,14 @@ class Booking extends \Narnoo\Base
     *   @param: int product ID [required]
     *   @result: JSON
     */
-    public function getProductAvailablity( $operatorId, $productId, $bookingCode, $startDate, $endDate )
+    public function createReservation( $bookingData )
     {   
 
-        $query = ['id' => $bookingCode, 'startDate' => $startDate, 'endDate' => $endDate];
-        
+               
         try{
-            $url = "/booking/availability".$operatorId."/".$productId;
+            $url = "/booking/create";
             
-            $response = $this->callNarnooAPI( "get", $url, $query );
+            $response = $this->callNarnooAPI( "POST", $url, NULL, $bookingData);
             return $response;
         } catch (Exception $e) {
             $response = array("error" => $e->getMessage());
@@ -110,11 +109,11 @@ class Booking extends \Narnoo\Base
 
 
     
-    /**************************************************
+    /***************************************************************
     *
     *                --- .Product Availablity Details ---
     *
-    **************************************************/
+    ***************************************************************/
 
 
 
