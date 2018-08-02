@@ -7,7 +7,7 @@ namespace Narnoo\Connect;
 class Connect extends \Narnoo\Base
 {
     
-    public function getFollowing($value)
+    public function getFollowing($value = NULL)
     {
         try{
             $url = "/connect/following";
@@ -24,7 +24,7 @@ class Connect extends \Narnoo\Base
     *
     *   {"latitude":"167";"longitude":"-16"}
     */
-    public function findBusinesses($value)
+    public function findBusinesses($value = NULL)
     {
         try{
             $url = "/connect/find";
@@ -40,7 +40,7 @@ class Connect extends \Narnoo\Base
     *
     *   {"name":"Narnoo"}
     */
-    public function searchBusinesses($value)
+    public function searchBusinesses($value = NULL)
     {
         try{
             $url = "/connect/search";

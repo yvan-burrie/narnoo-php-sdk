@@ -1,10 +1,26 @@
 {
+    "name": "narnoo/php-sdk",
+    "description": "A PHP-SDK for Narnoo API",
+    "keywords": ["Narnoo", "Tourism", "Booking", "Gateway", "Media"],
+    "homepage": "https://www.narnoo.com",
+    "authors": [
+        {
+            "name": "Hector Davies",
+            "email": "support@narnoo.com",
+            "homepage": "https://www.narnoo.com",
+            "role": "Developer"
+        }
+    ],
+    "type": "package",
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
+     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Narnoo\\" : "Narnoo/"
         }
-    }
+    },
+    "version": "1.0.0", //Version of the package
+    "minimum-stability": "dev" //Stability
 }

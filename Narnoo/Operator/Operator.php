@@ -1,10 +1,10 @@
 <?
 
-namespace Narnoo\Media;
+namespace Narnoo\Operator;
 /**
 *
 */
-class Media extends \Narnoo\Base
+class Operator extends \Narnoo\Base
 {
     /**************************************************
     *
@@ -18,7 +18,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getImages($value = NULL)
+    public function getImages($operatorId,$value = NULL)
     {   
 
         $params = [];
@@ -34,7 +34,7 @@ class Media extends \Narnoo\Base
 
 
         try{
-            $url = "/image/list?".$query;
+            $url = "/image/list/operator/".$operatorId."?".$query;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -51,10 +51,10 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getImageDetails($id)
+    public function getImageDetails($id,$operatorId)
     {
         try{
-            $url = "/image/details/".$id;
+            $url = "/image/details/".$id."/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
@@ -82,7 +82,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getPrints($value = NULL)
+    public function getPrints($operatorId,$value = NULL)
     {   
 
         $params = [];
@@ -99,7 +99,7 @@ class Media extends \Narnoo\Base
 
 
         try{
-            $url = "/brochure/list?".$query;
+            $url = "/brochure/operator/".$id."?".$query;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -116,10 +116,10 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getPrintDetails($id)
+    public function getPrintDetails($id,$operatorId)
     {
         try{
-            $url = "/brochure/details/".$id;
+            $url = "/brochure/details/".$id."/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
@@ -146,7 +146,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getVideos($value = NULL)
+    public function getVideos($operatorId,$value = NULL)
     {   
 
         $params = [];
@@ -162,7 +162,7 @@ class Media extends \Narnoo\Base
 
 
         try{
-            $url = "/video/list?".$query;
+            $url = "/video/operator/".$operatorId."?".$query;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -179,10 +179,10 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getVideoDetails($id)
+    public function getVideoDetails($id,$operatorId)
     {
         try{
-            $url = "/video/details/".$id;
+            $url = "/video/details/".$id."/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
@@ -210,7 +210,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getLogos($value = NULL)
+    public function getLogos($operatorId,$value = NULL)
     {   
 
         $params = [];
@@ -226,7 +226,7 @@ class Media extends \Narnoo\Base
 
 
         try{
-            $url = "/logo/list?".$query;
+            $url = "/logo/operator/".$operatorId."?".$query;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -243,10 +243,10 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getLogoDetails($id)
+    public function getLogoDetails($id,$operatorId)
     {
        try{
-            $url = "/logo/details/".$id;
+            $url = "/logo/details/".$id."/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -274,7 +274,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getAlbums($value = NULL)
+    public function getAlbums($operatorId,$value = NULL)
     {   
 
         $params = [];
@@ -290,7 +290,7 @@ class Media extends \Narnoo\Base
 
 
         try{
-            $url = "/album/list?".$query;
+            $url = "/album/list/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
@@ -307,7 +307,7 @@ class Media extends \Narnoo\Base
     *   @param: array page | total
     *   @result: JSON
     */
-    public function getAlbumImages($id,$value = NULL)
+    public function getAlbumImages($id,$operatorId,$value = NULL)
     {
         $params = [];
         if(empty($value['page'])){
@@ -319,7 +319,7 @@ class Media extends \Narnoo\Base
 
         
         try{
-            $url = "/album/images/".$id;
+            $url = "/album/images/".$id."/operator/".$operatorId;
             $response = $this->callNarnooAPI("get",$url,$value);
             return $response;
         } catch (Exception $e) {
