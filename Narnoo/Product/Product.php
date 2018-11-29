@@ -20,12 +20,28 @@ class Product extends \Narnoo\Base
     */
     public function getProducts($value = NULL)
     {   
+
+        $params = [];
+        if(empty($value['page'])){
+            $params['page'] = 1;
+        }else{
+            $params['page'] = $value['page'];
+        }
+        if(!empty($value['total'])){
+            $params['total'] = $value['total'];
+        }
+        $query = http_build_query( $params );
         
         try{
+            
+
             $url = "/product/list";
             if( !empty($value) ){
                 $url .= "/".$value;
             }
+            $url .= "?".$query;
+
+
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
