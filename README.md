@@ -70,5 +70,8 @@ echo "</pre>";
 4. Get product availability 
 5. [Create a booking reservation](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Create-Reservation)
 
-### Media
-1. [Get token owners images](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Images)
+### Token Owners Media
+1. [Image Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Images)
+2. [Print Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Print-Material-PDF)
+3. [Video Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Videos)
+4. [Logo Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Logos)
