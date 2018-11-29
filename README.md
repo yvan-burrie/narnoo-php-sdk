@@ -70,7 +70,7 @@ echo "</pre>";
 4. Get product availability 
 5. [Create a booking reservation](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Create-Reservation)
 
-### Token Owners Media
+### Token Owner's Media
 1. [Image Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Images)
 2. [Print Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Print-Material-PDF)
 3. [Video Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Videos)
