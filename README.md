@@ -75,3 +75,4 @@ echo "</pre>";
 2. [Print Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Print-Material-PDF)
 3. [Video Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Videos)
 4. [Logo Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Logos)
+5. [Album Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Album-Data)
