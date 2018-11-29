@@ -56,7 +56,7 @@ echo "</pre>";
 4. [List operators being followed](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Following)
 5. [Unfollow an operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Unfollow)
 
-###Listing
+### Listing
 1.[Get an operator listing](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Operator-Listing-Data)
 
 ### Products
