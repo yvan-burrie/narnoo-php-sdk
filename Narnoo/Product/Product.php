@@ -36,8 +36,8 @@ class Product extends \Narnoo\Base
             
 
             $url = "/product/list";
-            if( !empty($value) ){
-                $url .= "/".$value;
+            if( !empty($value['operator']) ){
+                $url .= "/".$value['operator'];
             }
             $url .= "?".$query;
 

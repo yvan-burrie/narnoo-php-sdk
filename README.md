@@ -5,9 +5,9 @@ The narnoo-php-sdk is a library to interact with Narnoo's RESTFUL API. It perfor
 > Detailed information about using this API will be added to this page and the repo Wiki.
 
 ## Work in progress using the latest API
-[link to Narnoo!](https://www.narnoo.com)
+[Narnoo.com](https://www.narnoo.com)
 
-[link to Register Account!](https://app.narnoo.com/register)
+[Register a user account](https://app.narnoo.com/register)
 
 
 # Get started with the PHP SDK
@@ -49,5 +49,5 @@ echo "</pre>";
 ## Example Calls
 ### Products
 These examples will be updated as we go!
-1. [Get list of products](#)
+1. [Get list of products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-list-of-products)
 2. [Get product details](#)

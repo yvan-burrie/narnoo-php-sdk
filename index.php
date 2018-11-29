@@ -1,20 +1,15 @@
 <?php
 include "vendor/autoload.php";
-use Narnoo\Operator\Operator;
+use Narnoo\Product\Product;
 
-$token = "";
-
-$list 	= new Operator();
-$list->setToken( $token );
-
-//$lists 	= $list->getToken($key,$secret);
-//$value['name']		= "Narnoo";
-$id 		= 73;
-$operator	= NULL;
-$lists 		= $list->getImages( $id );
+$token 		= "";
+$request 	= new Product();
+$request->setToken($token);
+$param['operator']		= 73;
+$data 		= $request->getProducts($param);
 
 
 echo "<pre>";
-print_r($lists);
+print_r($data);
 echo "</pre>";
 ?>
