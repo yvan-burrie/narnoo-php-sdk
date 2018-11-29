@@ -64,4 +64,5 @@ echo "</pre>";
 1. [Get bookable products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Bookable-Products)
 2. [Get bookable product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Details)
 3. [Get the booking products reservation details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Reservation-Details)
-4. [Create a booking reservation](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Create-Reservation)
+4. Get product availability 
+5. [Create a booking reservation](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Create-Reservation)
