@@ -57,6 +57,11 @@ echo "</pre>";
 5. [Unfollow an Operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Unfollow)
 
 ### Products
-
 1. [Get list of products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-list-of-products)
 2. [Get product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-Product-Details)
+
+### Booking
+1. [Get Bookable Products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Bookable-Products)
+2. [Get bookable Product Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Details)
+3. [Get the booking products reservation details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Reservation-Details)
+4. [Create a booking reservation](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Create-Reservation)
