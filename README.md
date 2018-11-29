@@ -47,7 +47,16 @@ echo "</pre>";
 ```
 
 ## Example Calls
+>These examples will be updated as we go!
+
+### Connect
+1. [Find Operators to Follow](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Find)
+2. [Search For Operators to Follow](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Search)
+3. [Follow an Operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect-Follow)
+4. [List Operators being Followed](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Following)
+5. [Unfollow an Operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Unfollow)
+
 ### Products
-These examples will be updated as we go!
+
 1. [Get list of products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-list-of-products)
 2. [Get product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-Product-Details)

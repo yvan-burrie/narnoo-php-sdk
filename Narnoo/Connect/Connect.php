@@ -7,11 +7,25 @@ namespace Narnoo\Connect;
 class Connect extends \Narnoo\Base
 {
     
-    public function getFollowing($value = NULL)
-    {
+        public function getFollowing($value = NULL)
+        {
+
+
+        $params = [];
+        if(empty($value['page'])){
+            $params['page'] = 1;
+        }else{
+            $params['page'] = $value['page'];
+        }
+        if(!empty($value['total'])){
+            $params['total'] = $value['total'];
+        }
+        $query = http_build_query( $params );
+
+
         try{
-            $url = "/connect/following";
-            $response = $this->callNarnooAPI("get",$url,$value);
+            $url = "/connect/following?".$query;
+            $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
             $response = array("error" => $e->getMessage());
@@ -24,11 +38,24 @@ class Connect extends \Narnoo\Base
     *
     *   {"latitude":"167";"longitude":"-16"}
     */
-    public function findBusinesses($value = NULL)
+    public function findBusinesses( $value = NULL,$data = NULL )
     {
+
+        $params = [];
+        if(empty($value['page'])){
+            $params['page'] = 1;
+        }else{
+            $params['page'] = $value['page'];
+        }
+        if(!empty($value['total'])){
+            $params['total'] = $value['total'];
+        }
+        $query = http_build_query( $params );
+
+
         try{
             $url = "/connect/find";
-            $response = $this->callNarnooAPI("post",$url,NULL, $value);
+            $response = $this->callNarnooAPI("post",$url,NULL, $data);
             return $response;
         } catch (Exception $e) {
             $response = array("error" => $e->getMessage());
@@ -56,7 +83,7 @@ class Connect extends \Narnoo\Base
     *
     *   {"type":"operator","id":78}
     */
-    public function followBusinesses($value)
+    public function followBusiness($value)
     {
         try{
             $url = "/connect/add";
@@ -71,7 +98,7 @@ class Connect extends \Narnoo\Base
     *
     *   {"type":"operator","id":78}
     */
-    public function removeBusinesses($value)
+    public function removeBusiness($value)
     {
         try{
             $url = "/connect/remove";
