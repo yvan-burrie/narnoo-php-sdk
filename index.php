@@ -5,8 +5,9 @@ use Narnoo\Product\Product;
 $token 		= "";
 $request 	= new Product();
 $request->setToken($token);
-$param['operator']		= 73;
-$data 		= $request->getProducts($param);
+$productId 	= 90696290;
+$operatorId = 73
+$data 		= $request->getProductDetails( $productId,$operatorId );
 
 
 echo "<pre>";

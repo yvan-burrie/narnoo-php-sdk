@@ -50,4 +50,4 @@ echo "</pre>";
 ### Products
 These examples will be updated as we go!
 1. [Get list of products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-list-of-products)
-2. [Get product details](#)
+2. [Get product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-Product-Details)
