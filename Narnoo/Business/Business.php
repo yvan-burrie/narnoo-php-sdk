@@ -18,13 +18,13 @@ class Business extends \Narnoo\Base
     *   @param: int business ID [optional]
     *   @result: JSON
     */
-    public function getListing($opId = NULL)
+    public function getListing($operatorId = NULL)
     {   
         
         try{
             $url = "/business/listing";
-            if( !empty($opId) ){
-                $url .= "/".$opId;
+            if( !empty($operatorId) ){
+                $url .= "/".$operatorId;
             }
             $response = $this->callNarnooAPI("get",$url);
             return $response;
