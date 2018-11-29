@@ -76,3 +76,10 @@ echo "</pre>";
 3. [Video Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Videos)
 4. [Logo Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Logos)
 5. [Album Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Content-Album-Data)
+
+### Connected Operator's Media
+1. [Image Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Connected-Operators-Images)
+2. [Print Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Connected-Operators-Prints)
+3. [Video Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Connected-Operators-Videos)
+4. [Logo Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Connected-Operator-Logos)
+5. [Album Details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Connected-Operator-Albums)
