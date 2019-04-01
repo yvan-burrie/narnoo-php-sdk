@@ -1,13 +1,12 @@
 <?php
 include "vendor/autoload.php";
-use Narnoo\Product\Product;
+use Narnoo\Media\Media;
 
 $token 		= "";
-$request 	= new Product();
+$request 	= new Media();
 $request->setToken($token);
-$productId 	= 90696290;
-$operatorId = 73
-$data 		= $request->getProductDetails( $productId,$operatorId );
+$operatorId	= 39;
+$data 		= $request->getImages( $operatorId );
 
 
 echo "<pre>";
