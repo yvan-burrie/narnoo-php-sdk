@@ -74,6 +74,45 @@ class Product extends \Narnoo\Base
         }
     }
 
+    /**
+    *   @title: Get Products
+    *   @date: 25.06.2018
+    *   @param: int business ID [required]
+    *   @result: JSON
+    */
+    public function getBookableProducts( $value )
+    {   
+
+        $params = [];
+        if(empty($value['page'])){
+            $params['page'] = 1;
+        }else{
+            $params['page'] = $value['page'];
+        }
+        if(!empty($value['total'])){
+            $params['total'] = $value['total'];
+        }
+        $query = http_build_query( $params );
+        
+        try{
+            
+            $url = "/booking/products";
+            if( !empty($value['operator']) ){
+                $url .= "/".$value['operator'];
+            }else{
+                $error = 'Need operator id - operator';
+                throw new Exception($error);
+            }
+            $url .= "?".$query;
+
+            $response = $this->callNarnooAPI("get",$url);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+
 
     
     /**************************************************

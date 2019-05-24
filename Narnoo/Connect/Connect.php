@@ -111,6 +111,26 @@ class Connect extends \Narnoo\Base
     }
 
 
+    /*
+    *
+    *   Get bookable businesses
+    */
+    public function getBookableBusinesses()
+    {
+        try{
+            $url = "/connect/bookable";
+            $response = $this->callNarnooAPI("get",$url);
+            return $response;
+        } catch (Exception $e) {
+            $response = array("error" => $e->getMessage());
+            return $response;
+        }
+    }
+
+
+
+
+
 
 
 
