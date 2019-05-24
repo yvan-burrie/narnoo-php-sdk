@@ -55,6 +55,7 @@ echo "</pre>";
 3. [Follow an operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect-Follow)
 4. [List operators being followed](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Following)
 5. [Unfollow an operator](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Business-Connect---Unfollow)
+6. [Bookable operators](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-Bookable-Businesses)
 
 ### Listing
 1. [Get an operator listing](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Operator-Listing-Data)
@@ -64,7 +65,7 @@ echo "</pre>";
 2. [Get product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-Product-Details)
 
 ### Booking
-1. [Get bookable products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Bookable-Products)
+1. [Get bookable products](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Get-a-business's-bookable-products)
 2. [Get bookable product details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Details)
 3. [Get the booking products reservation details](https://github.com/Narnoocom/narnoo-php-sdk/wiki/Booking-Product-Reservation-Details)
 4. Get product availability 
