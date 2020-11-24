@@ -1,5 +1,8 @@
 
 index.php
 
+# Composer
+/vendor/
+
 # JetBrains
-.idea
+/.idea/
