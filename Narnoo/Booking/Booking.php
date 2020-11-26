@@ -26,7 +26,8 @@ class Booking extends \Narnoo\Base
     {   
         
         try{
-            $url = "/booking/bookable_products/".$operatorId;
+            //$url = "/booking/bookable_products/".$operatorId;
+            $url = "/booking/products/".$operatorId;
             
             $response = $this->callNarnooAPI("get",$url);
             return $response;
@@ -121,6 +122,8 @@ class Booking extends \Narnoo\Base
      /**
     *   @title: Get Product Details
     *   @date: 25.06.2018
+    *   @param: int operator ID [required]
+    *   @param: int product ID [required]
     *   @result: JSON
     */
     public function createReservation( $bookingData )

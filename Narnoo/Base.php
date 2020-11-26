@@ -48,6 +48,7 @@ class Base
     {
         try{
 
+            //$this->prepareAccessToken();
             $url = self::API_URL . $request;
             $header = array('Authorization'=>'bearer '. $this->token);
             $data   = array('query' => $post,'headers' => $header);
@@ -71,7 +72,8 @@ class Base
 
             return json_decode($response->getBody()->getContents());
 
-                    
+            //return $data;
+        
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);
             return $response;

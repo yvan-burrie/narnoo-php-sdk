@@ -20,28 +20,12 @@ class Product extends \Narnoo\Base
     */
     public function getProducts($value = NULL)
     {   
-
-        $params = [];
-        if(empty($value['page'])){
-            $params['page'] = 1;
-        }else{
-            $params['page'] = $value['page'];
-        }
-        if(!empty($value['total'])){
-            $params['total'] = $value['total'];
-        }
-        $query = http_build_query( $params );
         
         try{
-            
-
             $url = "/product/list";
-            if( !empty($value['operator']) ){
-                $url .= "/".$value['operator'];
+            if( !empty($value) ){
+                $url .= "/".$value;
             }
-            $url .= "?".$query;
-
-
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
@@ -66,45 +50,6 @@ class Product extends \Narnoo\Base
             if( !empty($operator) ){
                 $url .= "/".$operator;
             }
-            $response = $this->callNarnooAPI("get",$url);
-            return $response;
-        } catch (Exception $e) {
-            $response = array("error" => $e->getMessage());
-            return $response;
-        }
-    }
-
-    /**
-    *   @title: Get Products
-    *   @date: 25.06.2018
-    *   @param: int business ID [required]
-    *   @result: JSON
-    */
-    public function getBookableProducts( $value )
-    {   
-
-        $params = [];
-        if(empty($value['page'])){
-            $params['page'] = 1;
-        }else{
-            $params['page'] = $value['page'];
-        }
-        if(!empty($value['total'])){
-            $params['total'] = $value['total'];
-        }
-        $query = http_build_query( $params );
-        
-        try{
-            
-            $url = "/booking/products";
-            if( !empty($value['operator']) ){
-                $url .= "/".$value['operator'];
-            }else{
-                $error = 'Need operator id - operator';
-                throw new Exception($error);
-            }
-            $url .= "?".$query;
-
             $response = $this->callNarnooAPI("get",$url);
             return $response;
         } catch (Exception $e) {
