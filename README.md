@@ -14,7 +14,7 @@ The narnoo-php-sdk is a library to interact with Narnoo's RESTFUL API. It perfor
 
 ## Installation
 
-Install our library with composer
+Install our [library with composer](https://packagist.org/packages/narnoo/php-sdk):
 ```
 composer require narnoo/php-sdk
 ```
